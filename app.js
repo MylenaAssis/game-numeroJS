@@ -1,10 +1,10 @@
 alert('Seja bem vindo ao jogo!');
 let chute;
-let numeroSecreto = 5;
+let numeroSecreto = parseInt(Math.random() * 100 + 1);
 let tentativas = 1;
 
 while (chute != numeroSecreto){
-    chute = prompt('Escreva um número de 1 a 10.');
+    chute = prompt('Escreva um número de 1 a 100.');
     if (chute == numeroSecreto) {
         break;
     } else {
@@ -17,6 +17,6 @@ while (chute != numeroSecreto){
     }
 }
 
-//operador ternário
+//operador ternario
 let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
 alert(`Você acertou o numero ${numeroSecreto} com ${tentativas} ${palavraTentativa}.`);
