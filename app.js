@@ -1,10 +1,14 @@
 alert('Seja bem vindo ao jogo!');
+let numeroMaximo = 5;
 let chute;
-let numeroSecreto = parseInt(Math.random() * 100 + 1);
+let numeroSecreto = parseInt(Math.random() * numeroMaximo + 1);
 let tentativas = 1;
 
+console.log(numeroMaximo);
+console.log(numeroSecreto);
+
 while (chute != numeroSecreto){
-    chute = prompt('Escreva um número de 1 a 100.');
+    chute = prompt(`Escreva um número de 1 a ${numeroMaximo}.`);
     if (chute == numeroSecreto) {
         break;
     } else {
